@@ -1,5 +1,5 @@
 function fetchData() {
-  fetch('https://dummyjson.com/products')
+  fetch('https://dummyjson.com/products?skip=0&limit=10')
     .then((res) => {
         if (!res.ok) {
             throw Error('ERROR')
@@ -11,7 +11,7 @@ function fetchData() {
       const html = data.products.map(user => {
         return `<div class="container">
             <div class="user ">
-                <p>Title: ${user.title}</p>
+                <p>${user.id}. Title: ${user.title}</p>
             </div>
             <div class="user window">
                 <p>Title: ${user.title}</p>

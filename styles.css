@@ -14,7 +14,7 @@
 .window {
   display: none;
   position: absolute;
-  left: 500px;
+  left: 400px;
   width: 300px;
 }
 
@@ -23,4 +23,9 @@ div.user + div.window {
 }
 div.user:hover + div.window {
   display: block;
+  background-color: aqua;
+}
+
+div.user:hover {
+  background-color: aqua;
 }

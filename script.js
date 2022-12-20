@@ -9,8 +9,16 @@ function fetchData() {
     .then((data) => {
       console.log(data.products);
       const html = data.products.map(user => {
-        return `<p>Name: ${user.title}</p>`
-      })
+        return `<div class="container">
+            <div class="user ">
+                <p>Title: ${user.title}</p>
+            </div>
+            <div class="user window">
+                <p>Title: ${user.title}</p>
+                <p>Description: ${user.description}</p>
+            </div>
+        </div>`
+      }).join(' ')
       document.getElementById('app').insertAdjacentHTML("afterbegin", html)
     })
     .catch((error) => console.log(error));
